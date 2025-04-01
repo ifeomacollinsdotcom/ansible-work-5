@@ -1,9 +1,7 @@
---
-- name: Deploy php App
-  hosts: n3
+---
+- name: Deploy PHP Application
+  hosts: php_servers
   become: yes
-
   roles:
-   - apache
-   - php
-...
+    - httpd
+    - php_app
