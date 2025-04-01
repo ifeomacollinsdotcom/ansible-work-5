@@ -1,11 +1,10 @@
-----
-- name: under maintenance
+---
+- name: Apply maintenance page
   hosts: n2
   become: yes
 
   tasks:
-  - name: Update maintenance
-    copy:
-      src: Maintenance.html
-      dest: /var/www/html/index.html
-...
+    - name: Update maintenance page
+      copy:
+        src: Maintenance.html
+        dest: /var/www/html/index.html
